@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <img src="Pics/pic2.png" alt="Logo" class="nav-logo">
+            <img src="Pics/pic2.png" alt="Logo" class="nav-logo" id="backToTop">
         </div>
         <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
@@ -143,7 +143,7 @@
                 <div class="project-box">
                     <h3 class="project-title">Portfolio avec Symfony</h3>
                     <div class="project-description">
-                        <p>Création d'un portfolio avec Symfony qui affiche mes projets et mes compétences</p>
+                        <p>Création d'un portfolio avec Symfony qui affiche une présentaion sur moi, mes projets et mes compétences</p>
                     </div>
                     <a href="https://github.com/yassine1427/SAE104" class="project-button">
                         <i class="fab fa-github"></i> Voir le projet
@@ -280,7 +280,7 @@
                         <span class="certification-date">
                             <i class="fas fa-calendar-alt"></i> 2024
                         </span>
-                        <a href="#" class="certification-verify" target="_blank">
+                        <a href="Pics/ATT.png" class="certification-verify" target="_blank">
                             <i class="fas fa-certificate"></i> Voir le certificat
                         </a>
                     </div>
@@ -368,6 +368,16 @@
         scrollToBottomBtn.onclick = function() {
             window.scrollTo({
                 top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        };
+
+        // Gestion du clic sur le logo pour revenir en haut de la page
+        const logo = document.getElementById('backToTop');
+
+        logo.onclick = function() {
+            window.scrollTo({
+                top: 0,
                 behavior: 'smooth'
             });
         };

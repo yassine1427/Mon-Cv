@@ -51,6 +51,12 @@ body {
     height: 40px;
     width: auto;
     object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
 }
 
 .nav-links {
