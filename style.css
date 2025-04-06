@@ -1,0 +1,928 @@
+/* Variables et Reset */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f5f6fa;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 5%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Style du bouton contact dans la navbar */
+.contact-btn {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Style du bouton de téléchargement */
+.download-cv {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    padding: 8px 16px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.download-cv i {
+    color: #ff0000; /* Icône PDF en rouge */
+    font-size: 1.2rem;
+}
+
+.download-cv:hover {
+    background-color: var(--primary-color);
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.download-cv:hover i {
+    color: white; /* L'icône devient blanche au survol */
+}
+
+/* Adaptation pour le mode sombre */
+.dark-theme .download-cv {
+    background-color: #2c2c2c;
+    color: white !important;
+    border-color: var(--secondary-color);
+}
+
+.dark-theme .download-cv:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .download-cv {
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+/* Section Accueil */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: 60px;
+}
+
+.transparent-block {
+    background: rgba(255, 255, 255, 0.85); /* Blanc transparent */
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Effet de flou derrière le bloc */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.profile-photo {
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+/* Sections communes */
+section {
+    padding: 5rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+/* Timeline pour Formation et Expérience */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.timeline-item ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+/* Compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-category ul {
+    list-style-type: none;
+}
+
+.skill-category li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.skill-category li:before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Style du bloc des centres d'intérêt */
+.interest-box {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Même largeur que le bloc des langues */
+}
+
+.interest-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.interest-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.interest-list li:before {
+    content: "•"; /* Point bleu comme dans le bloc des langues */
+    color: var(--secondary-color);
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* Boutons de défilement */
+.scroll-button {
+    position: fixed;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#scrollToTop {
+    bottom: 90px;
+}
+
+#scrollToBottom {
+    bottom: 30px;
+}
+
+.scroll-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Mode sombre - Couleurs de base */
+.dark-theme {
+    --primary-color: #663399; /* Violet pour les boutons */
+    --secondary-color: #8a2be2; /* Violet plus clair pour les hover */
+    --text-color: #ffffff; /* Texte en blanc */
+    --dark-bg: #1a1a1a; /* Fond sombre */
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+/* Mode sombre - Textes et contenus */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme p,
+.dark-theme li,
+.dark-theme .timeline-item p,
+.dark-theme .skill-category li,
+.dark-theme .project-description {
+    color: var(--text-color);
+}
+
+/* Mode sombre - Boutons et éléments interactifs */
+.dark-theme .tool-button,
+.dark-theme .scroll-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.dark-theme .tool-button:hover,
+.dark-theme .scroll-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Mode sombre - Cartes et conteneurs */
+.dark-theme .timeline-item,
+.dark-theme .skill-category,
+.dark-theme .project-box {
+    background: #2c2c2c;
+    color: var(--text-color);
+}
+
+/* Mode sombre - Barre de navigation */
+.dark-theme .navbar {
+    background: rgba(26, 26, 26, 0.95);
+}
+
+.dark-theme .nav-links a {
+    color: var(--text-color);
+}
+
+/* Mode sombre - Boutons de projet */
+.dark-theme .project-button {
+    background: var(--primary-color);
+    color: white;
+}
+
+.dark-theme .project-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Mode sombre - Centres d'intérêt */
+.dark-theme .interest-box {
+    background: #2c2c2c;
+}
+
+.dark-theme .interest-list li {
+    color: white;
+}
+
+/* Mode sombre - Footer */
+.dark-theme footer {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Mode mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .skills-grid,
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .toolbar {
+        top: auto;
+        bottom: 20px;
+    }
+
+    .nav-logo {
+        height: 30px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer avec copyright centré */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid var(--secondary-color);
+}
+
+footer p {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustement pour le mode sombre */
+.dark-theme footer {
+    background: #1a1a1a;
+    border-top-color: var(--secondary-color);
+}
+
+/* Style pour les boîtes de projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-box {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.project-description {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.project-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    background: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.project-button i {
+    font-size: 1.2rem;
+}
+
+/* Adaptation pour le mode sombre */
+.dark-theme .project-box {
+    background: #2c2c2c;
+}
+
+.dark-theme .project-title {
+    color: white;
+}
+
+.dark-theme .project-description {
+    color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Style du logo */
+.nav-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Ajustement du conteneur du logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Adaptation pour le mode sombre */
+.dark-theme .nav-logo {
+    filter: brightness(1.2);
+}
+
+/* Section contact et boutons sociaux */
+.contact-section {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-btn i {
+    font-size: 1.5rem;
+}
+
+.social-btn.linkedin {
+    background: #0077b5;
+}
+
+.social-btn.github {
+    background: #333;
+}
+
+.social-btn.outlook {
+    background: #0078d4;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptation mode sombre */
+.dark-theme .contact-section {
+    background: var(--dark-bg);
+}
+
+.dark-theme .contact-btn {
+    background: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-btn {
+        width: 80%;
+        justify-content: center;
+    }
+}
+
+/* Style du bloc À propos */
+.about-box {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.about-text {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-item i {
+    color: var(--secondary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.info-item p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Adaptation pour le mode sombre */
+.dark-theme .about-box {
+    background: #2c2c2c;
+}
+
+.dark-theme .about-text,
+.dark-theme .info-item p {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-box {
+        padding: 1.5rem;
+    }
+    
+    .info-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Style du cadre de présentation */
+.presentation-frame {
+    border: 2px solid #000;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.presentation-text {
+    color: var(--text-color);
+    line-height: 1.8;
+    text-align: center;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Adaptation pour le mode sombre */
+.dark-theme .presentation-frame {
+    border-color: #fff;
+}
+
+.dark-theme .presentation-text {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .presentation-frame {
+        padding: 1rem;
+    }
+    
+    .presentation-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* Style des certifications */
+.certification-box {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    max-width: 800px;
+}
+
+.certification-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.certification-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.certification-header h3 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.certification-issuer {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.certification-description {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.certification-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.certification-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+
+.certification-verify {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.certification-verify:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* Adaptation pour le mode sombre */
+.dark-theme .certification-box {
+    background: #2c2c2c;
+}
+
+.dark-theme .certification-header h3 {
+    color: white;
+}
+
+.dark-theme .certification-description,
+.dark-theme .certification-date {
+    color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .certification-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .certification-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Style des boutons de thème */
+.theme-toggle {
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.theme-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.theme-button i {
+    font-size: 20px;
+}
+
+/* Adaptation pour le mode sombre */
+.dark-theme .theme-button {
+    background-color: var(--primary-color);
+}
+
+.dark-theme .theme-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 80px;
+    }
+}
+
+/* Cache le bouton non pertinent selon le mode */
+body:not(.dark-theme) #darkMode {
+    display: flex;
+}
+
+body:not(.dark-theme) #lightMode {
+    display: none;
+}
+
+body.dark-theme #darkMode {
+    display: none;
+}
+
+body.dark-theme #lightMode {
+    display: flex;
+}
+
+/* Adaptation pour le mode sombre */
+.dark-theme .transparent-block {
+    background: rgba(44, 44, 44, 0.85); /* Fond sombre transparent */
+}
+
+.dark-theme .hero h1,
+.dark-theme .hero p {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .transparent-block {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+} 

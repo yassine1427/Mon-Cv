@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Yassine ZAKRI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="Pics/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Boutons de thème - à placer en premier -->
+    <div class="theme-toggle">
+        <button id="lightMode" class="theme-button" title="Mode clair">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button id="darkMode" class="theme-button" title="Mode sombre">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Pics/pic2.png" alt="Logo" class="nav-logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#projets">Projets Académiques</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li>
+                <a href="Cv/CV_Yassine_ZAKRI.pdf" download class="download-cv">
+                    <i class="fas fa-file-pdf"></i>
+                    Télécharger CV
+                </a>
+            </li>
+            <li><a href="#contact" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="circuit-background">
+            <div class="circuit-line line1"></div>
+            <div class="circuit-line line2"></div>
+            <div class="circuit-line line3"></div>
+            <div class="circuit-dot dot1"></div>
+            <div class="circuit-dot dot2"></div>
+            <div class="circuit-dot dot3"></div>
+        </div>
+        <div class="transparent-block" data-aos="fade-up">
+            <div class="hero-content">
+                <div class="profile-photo">
+                    <img src="Pics/photo.png" alt="Yassine ZAKRI" class="profile-image">
+                </div>
+                <h1>Yassine ZAKRI</h1>
+                <p>Administrateur systèmes, réseaux et sécurité - En alternance</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="about">
+        <div class="container" data-aos="fade-right">
+            <h2 class="text-left">À propos de moi</h2>
+            <div class="about-box">
+                <div class="presentation-frame">
+                    <p class="presentation-text">
+                        Étudiant passionné par les réseaux informatiques<br>
+                        et la cybersécurité, avec une solide formation<br>
+                        académique, je suis à la recherche d'une alternance<br>
+                        en administration des systèmes, réseaux<br>
+                        et sécurité.
+                    </p>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>zakri.yassine@outlook.fr</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>06.51.72.72.34</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>25 Boulevard de Belgique, Roanne (42300)</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar"></i>
+                        <p>Né le 05/05/2006</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-car"></i>
+                        <p>Permis B</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formation -->
+    <section id="formation" class="skills">
+        <div class="container" data-aos="fade-up">
+            <h2>Diplômes et Formations</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>BUT Réseaux et Télécommunication</h3>
+                    <p>IUT, Roanne</p>
+                    <p>Depuis 2024</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Baccalauréat SC Physique Chimie</h3>
+                    <p>Lycée 6 Novembre, Maroc</p>
+                    <p>2023 - 2024</p>
+                    <p>Mention Bien</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets Académiques avec liens -->
+    <section id="projets" class="projects">
+        <div class="container" data-aos="fade-up">
+            <h2>Projets Académiques</h2>
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <div class="project-box">
+                    <h3 class="project-title">Programme de traitement des données</h3>
+                    <div class="project-description">
+                        <p> Traiter des données en python et sous Excel</p>
+                    </div>
+                    <a href="https://github.com/yassine1427/SAE105" class="project-button">
+                        <i class="fab fa-github"></i> Voir le projet
+                    </a>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-box">
+                    <h3 class="project-title">Portfolio avec Symfony</h3>
+                    <div class="project-description">
+                        <p>Création d'un portfolio avec Symfony qui affiche mes projets et mes compétences</p>
+                    </div>
+                    <a href="https://github.com/yassine1427/SAE104" class="project-button">
+                        <i class="fab fa-github"></i> Voir le projet
+                    </a>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-box">
+                    <h3 class="project-title">Création d'un site web</h3>
+                    <div class="project-description">
+                        <p>Création d'un site web avec HTML et CSS pour présenter le sport de la formule 1</p>
+                    </div>
+                    <a href="https://github.com/yassine1427/R109" class="project-button">
+                        <i class="fab fa-github"></i> Voir le projet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expérience -->
+    <section id="experience" class="projects">
+        <div class="container" data-aos="fade-up">
+            <h2>Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Bénévolat dans une association</h3>
+                    <p>Association de paix, Al jadida, Morocco - De 2022 à 2024</p>
+                    <ul>
+                        <li>Animation</li>
+                        <li>Participer à donner des idée pour developper l'association</li>
+                        <li>Supporter les handicap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="skills">
+        <div class="container" data-aos="fade-up">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Techniques</h3>
+                    <ul>
+                        <li>Créer une documentation technique</li>
+                        <li>Créer un dessin technique, un plan, ou une carte</li>
+                        <li>Réparer un équipement, une machine, une installation</li>
+                        <li>Connaissance des protocoles TCP/IP, VLAN, VPN, DHCP, DNS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Transversales</h3>
+                    <ul>
+                        <li>Identifier des problèmes</li>
+                        <li>Guider et motiver les autres</li>
+                        <li>Gestion du temps de manière efficace</li>
+                        <li>Gestion du stress et des émotions</li>
+                        <li>Développement de la résilience</li>
+                        <li>Capacité à travailler en équipe</li>
+                        <li>Adaptabilité et flexibilité</li>
+                        <li>Autonomie et prise d'initiative</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Outils informatiques</h3>
+                    <ul>
+                        <li>Linux (Ubuntu, Debian, Kali)</li>
+                        <li>Windows</li>
+                        <li>vSphere</li>
+                        <li>VMware</li>
+                        <li>Docker</li>
+                        <li>Logiciels Office</li>
+                        <li>Adobe photoshop</li>
+                        <li>Visual studio</li>
+                        <li>Packet tracer</li>
+                        <li>Wireshark</li>
+                        <li>Putty</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Langages de programmation</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Langues</h3>
+                    <ul>
+                        <li>Arabe - langue maternelle</li>
+                        <li>Français - niveau C1</li>
+                        <li>Anglais - niveau B2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Centres d'intérêt -->
+    <section id="interets" class="interests-section">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-left">Centres d'intérêt</h2>
+            <div class="interest-box">
+                <ul class="interest-list">
+                    <li>Natation</li>
+                    <li>Gaming</li>
+                    <li>Football</li>
+                    <li>Paddle</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Certifications -->
+    <section id="certifications" class="certifications">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-left">Certifications</h2>
+            <div class="certification-box">
+                <div class="certification-header">
+                    <img src="Pics/anssi-logo.png" alt="ANSSI Logo" class="certification-logo">
+                    <h3>Certification Cybersécurité</h3>
+                </div>
+                <div class="certification-content">
+                    <p class="certification-issuer">MOOC SecNumacadémie - ANSSI</p>
+                    <p class="certification-description">
+                        Formation certifiante en cybersécurité délivrée par l'Agence Nationale de la Sécurité des Systèmes d'Information
+                    </p>
+                    <div class="certification-details">
+                        <span class="certification-date">
+                            <i class="fas fa-calendar-alt"></i> 2024
+                        </span>
+                        <a href="#" class="certification-verify" target="_blank">
+                            <i class="fas fa-certificate"></i> Voir le certificat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Boutons de défilement -->
+    <button id="scrollToTop" class="scroll-button" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <button id="scrollToBottom" class="scroll-button" title="Aller en bas">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        function sendEmail(e) {
+            e.preventDefault();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const outlookUrl = `https://outlook.live.com/owa/?path=/mail/action/compose&to=zakri.yassine@outlook.fr&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+            window.open(outlookUrl, '_blank');
+        }
+
+        // Gestion du thème clair/sombre uniquement
+        const lightModeBtn = document.getElementById('lightMode');
+        const darkModeBtn = document.getElementById('darkMode');
+        
+        lightModeBtn.onclick = function() {
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+        };
+        
+        darkModeBtn.onclick = function() {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+        };
+
+        // Restaurer le thème préféré
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        // Boutons de défilement
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+        const scrollToBottomBtn = document.getElementById("scrollToBottom");
+
+        // Fonction pour vérifier la position de défilement
+        window.onscroll = function() {
+            // Position actuelle du défilement
+            const scrollPosition = window.pageYOffset;
+            // Hauteur totale de la page
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+
+            // Gestion du bouton "Retour en haut"
+            if (scrollPosition > 300) {
+                scrollToTopBtn.style.display = "flex";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+
+            // Gestion du bouton "Aller en bas"
+            if (scrollPosition < totalHeight - 300) {
+                scrollToBottomBtn.style.display = "flex";
+            } else {
+                scrollToBottomBtn.style.display = "none";
+            }
+        };
+
+        // Fonction pour remonter en haut
+        scrollToTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
+        // Fonction pour descendre en bas
+        scrollToBottomBtn.onclick = function() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        };
+    </script>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container" data-aos="fade-up">
+            <h2>Contact</h2>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/yassine-zakri-917267296/" class="social-btn linkedin" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/yassine1427" class="social-btn github" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="mailto:zakri.yassine@outlook.fr" class="social-btn outlook">
+                    <i class="fas fa-envelope"></i>
+                    Outlook
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Yassine ZAKRI</p>
+    </footer>
+
+</body>
+</html>
